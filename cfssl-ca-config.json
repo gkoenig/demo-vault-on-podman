@@ -1,0 +1,14 @@
+{
+     "CN": "My Company Root CA",
+     "key": {
+         "algo": "rsa",
+         "size": 2048
+     },
+     "names": [{
+         "C": "CH",
+         "L": "Zurich",
+         "O": "Company",
+         "OU": "Cloud",
+         "ST": "justAdemo"
+     }]
+ }
