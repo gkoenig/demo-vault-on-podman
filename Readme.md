@@ -1,6 +1,6 @@
 # Hashicorp Vault on Podman
 
-[Hashicorp Vault](https://www.vaultproject.io/)
+[Hashicorp Vault](https://www.vaultproject.io/)  
 [Podman](https://podman.io/getting-started/)
 
 ## container setup
@@ -91,7 +91,7 @@ sudo podman run --cap-add IPC_LOCK --rm docker.io/library/vault -p 8200:8200 --p
     ```vault operator init -key-shares=1 -key-threshold=1 -address=http://0.0.0.0:8200```
     we will just use 1 unseal key for this demo purposes, in real world setups you will set property _-key-shares_ to at least 3, or 5.
     **!!!** copy the _Initial Root Token_ and your _Unseal Key_ from the output of the operator init command.....and export env property for the token.  
-    ```export VAULT_TOKEN="<<your-vault-token>>"```
+    ```export VAULT_TOKEN="<<your-vault-token>>"```  
     ```export VAULT_ADDR="http://0.0.0.0:8200"```
 
   * unseal vault server  
@@ -162,7 +162,7 @@ sudo podman run --cap-add IPC_LOCK --rm docker.io/library/vault -p 8200:8200 --p
   ```vault kv list kv```  
 
 - via cmdline cli
-    ```vault kv get kv/foo```  
+    ```vault kv get kv/foo```    
     ```vault kv get kv/foofile``` # retrieve the key::map-of-values as added via put file above  
 - via REST
     ```bash
@@ -246,9 +246,9 @@ cfssl genkey -initca ./cfssl-ca-config.json | cfssljson -bare ./root-cert
 
 Ensure that you set the env properties:
 
-```export VAULT_TOKEN="<<your-vault-token>>"```
-```export VAULT_ADDR="http://0.0.0.0:8200"```
-```export VAULT_DOMAIN="my.example.com"```
+```export VAULT_TOKEN="<<your-vault-token>>"```  
+```export VAULT_ADDR="http://0.0.0.0:8200"```  
+```export VAULT_DOMAIN="my.example.com"```  
 
 - enable PKI secret engine and _mount_ it under "pki"
   - cmdline  
