@@ -1,0 +1,3 @@
+{
+  "policy": "path \"itdm-fabio-ca/issue/kafka-broker\" { capabilities=[\"create\",\"update\",\"read\"] }"
+}
