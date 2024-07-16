@@ -39,18 +39,16 @@ check the output for your container running _vault_ and pick its container-id
 
 - inspect container
 
-```sudo podman inspect <<containerid>>```
+```sudo podman inspect <<container-id>>```
 
 - get logs
 
-```sudo podman logs <<containerid>>```
+```sudo podman logs <<container-id>>```
 
 ### managing pods
 
 - add a container to a pod:  
-
-``` ```
-
+```sudo podman run --pod=<POD_NAME> ```
 - stop a container in a pod:  
 ```sudo podman stop <<container-id>>```
 - stop a pod:  
